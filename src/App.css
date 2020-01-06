@@ -1,38 +1,70 @@
-.App {
+/* .App {
+  background-color: antiquewhite;
+} */
+#root {
+  background-color: lightyellow;
+}
+.item {
+  /* background-color: var(--mainWhite); */
+  background-color: linen;
+  line-height: 1.5rem;
+  padding: 10px 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s linear;
+  color: black;
+}
+.item:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(1.05);
+}
+.Navbar {
+  background-color: lightcyan;
+  font-size: large;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clear-btn {
+  color: red;
+  border: none;
+  margin-right: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.edit-btn {
+  color: green;
+  border: none;
+  margin-right: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.star-btn {
+  color: purple;
+  border: none;
+  /* margin-right: 5px; */
+}
+.info {
+  flex: 0 0 60%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  color: var(--mainWhite);
+  /* letter-spacing: 5px; */
+  font-family: "Roboto", sans-serif;
+}
+h3 {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  color: gray;
+  font-style: oblique;
+  /* letter-spacing: 5px; */
+  font-family: "Roboto", sans-serif;
+}
+
+.sub-card {
+  background-color: lightcyan;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* border-radius: 10px; */
 }
