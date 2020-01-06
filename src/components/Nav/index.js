@@ -13,7 +13,7 @@ function NavDropdownExample() {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="2" title="Item">
-            My Daily List
+            My Daily Tasks List
           </Nav.Link>
         </Nav.Item>
         <NavDropdown title="Dropdown" id="nav-dropdown">
