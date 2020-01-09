@@ -2,11 +2,10 @@
   background-color: antiquewhite;
 } */
 #root {
-  background-color: lightyellow;
+  background-color: black;
 }
 .item {
-  /* background-color: var(--mainWhite); */
-  background-color: linen;
+  background-color: lightcyan;
   line-height: 1.5rem;
   padding: 10px 10px;
   margin-bottom: 1rem;
@@ -15,10 +14,12 @@
   justify-content: space-between;
   transition: all 0.3s linear;
   color: black;
+  border-radius: 2rem;
 }
 .item:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: scale(1.05);
+  border-radius: 2rem;
 }
 .Navbar {
   background-color: lightcyan;
@@ -35,10 +36,13 @@
   border: none;
   margin-right: 5px;
 }
-.star-btn {
+.check-btn {
   color: purple;
   border: none;
-  /* margin-right: 5px; */
+}
+.delete-all {
+  border-radius: 2rem;
+  font-size: small;
 }
 .info {
   flex: 0 0 60%;
@@ -49,22 +53,26 @@ h1 {
   text-align: center;
   text-transform: capitalize;
   margin: 2rem 0;
-  color: var(--mainWhite);
-  /* letter-spacing: 5px; */
+  color: white;
   font-family: "Roboto", sans-serif;
 }
 h3 {
   text-align: center;
   text-transform: capitalize;
   margin: 2rem 0;
-  color: gray;
+  color: linen;
   font-style: oblique;
-  /* letter-spacing: 5px; */
   font-family: "Roboto", sans-serif;
 }
 
 .sub-card {
-  background-color: lightcyan;
-  color: white;
-  /* border-radius: 10px; */
+  color: linen;
+  background-color: purple;
+  border-radius: 2rem;
+  margin-top: 2rem;
 }
+/* .sub-card:hover {
+  background-color: purple;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(1.05);
+} */

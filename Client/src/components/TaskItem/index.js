@@ -1,8 +1,8 @@
 import React from "react";
 
-import { MdEdit, MdDelete, MdStar } from "react-icons/md";
+import { MdEdit, MdDelete, MdCheck } from "react-icons/md";
 
-const TaskItem = ({ task, handleDelete, handleEdit }) => {
+const TaskItem = ({ task, handleDelete, handleEdit, handleComplete }) => {
   console.log("TaskItem: ", task);
   // const { id, charge, amount } = task;
   const { id, todo } = task;
@@ -13,30 +13,29 @@ const TaskItem = ({ task, handleDelete, handleEdit }) => {
         {/* <span className="amount">$ {amount}</span> */}
       </div>
       <div>
-        <button
+        <span
           className="edit-btn"
           aria-label="edit button"
           onClick={() => handleEdit(id)}
         >
           <MdEdit />
-        </button>
-        <button
+        </span>
+        <span
           className="clear-btn"
           aria-label="delete button"
           onClick={() => handleDelete(id)}
         >
           <MdDelete />
-        </button>
-        <button
-          className="star-btn"
-          aria-label="star button"
-          // onClick={() => handleStar(id)}
+        </span>
+        <span
+          className="check-btn"
+          aria-label="check-box"
+          onClick={() => handleComplete(id)}
         >
-          <MdStar />
-        </button>
+          <MdCheck />
+        </span>
       </div>
     </li>
-    
   );
 };
 

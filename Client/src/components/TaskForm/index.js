@@ -1,15 +1,10 @@
 import React from "react";
 import { MdAdd } from "react-icons/md";
-import { Form, Button, Col, Row, Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const TaskForm = ({
-  todo,
-  // amount,
-  handleTodo,
-  // handleAmount,
-  handleSubmit,
-  edit
-}) => {
+import { Form, Button, Col, Row } from "react-bootstrap";
+
+const TaskForm = ({ todo, handleTodo, handleSubmit, edit }) => {
   return (
     <>
       {/* <Container>
@@ -23,25 +18,42 @@ const TaskForm = ({
   </Row>
   </Container> */}
 
-      <Container>
+      {/* <Container>
         <Row>
-          <Col xs={12} md={6}>
-            <Form onSubmit={handleSubmit}>
-              <Form.Group as={Row} controlId="formHorizontalEmail">
-                <Form.Label column sm={6}>
-                  Add Your To Do's
-                </Form.Label>
-                <Col sm={10}>
-                  <Form.Control
-                    type="text"
-                    placeholder="e.g Go grocery"
-                    value={todo}
-                    onChange={handleTodo}
-                    id="todo"
-                    name="todo"
-                  />
-                </Col>
-                {/* <Form.Label column sm={6}>
+          <Col xs={12} md={6}> */}
+      <Form onSubmit={handleSubmit}>
+        <Form.Group as={Row} controlId="formHorizontalEmail">
+          <Form.Label column sm={6}>
+            Add Your To Do's
+          </Form.Label>
+          <Col sm={10}>
+            <Form.Control
+              type="text"
+              input="text"
+              placeholder="e.g Go grocery"
+              value={todo}
+              onChange={handleTodo}
+              id="todo"
+              name="todo"
+            />
+          </Col>
+
+          <Col sm={10}>
+            <Button
+              type="submit"
+              className={
+                edit
+                  ? "btn-success btn-btn-block mt-3"
+                  : "btn-primary btn-btn-block mt-3"
+              }
+            >
+              {edit ? "edit" : ""}
+
+              <MdAdd className="btn-icon" />
+            </Button>
+          </Col>
+
+          {/* <Form.Label column sm={6}>
                   Add Time
                 </Form.Label>
                 <Col sm={10}>
@@ -57,17 +69,12 @@ const TaskForm = ({
                     // onChange={handleAmount}
                   />
                 </Col> */}
-                <>
-                  <Button variant="danger" type="submit">
-                    {edit ? "edit" : ""}
-                    <MdAdd className="btn-icon" />
-                  </Button>
-                </>
-              </Form.Group>
-            </Form>
-          </Col>
+          <></>
+        </Form.Group>
+      </Form>
+      {/* </Col>
         </Row>
-      </Container>
+      </Container> */}
 
       {/* <Container>
         <Row>

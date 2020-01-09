@@ -7,6 +7,7 @@ import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/Nav";
+import { Col, Row, Container, Card } from "react-bootstrap";
 
 // const uuidv4 = require("uuid/v4");
 
@@ -147,26 +148,38 @@ function App() {
 
   return (
     <>
-      {alert.show && <Alert type={alert.type} text={alert.text} />}
       <Nav />
-      <Alert />
-      <h1>My Planner</h1>
+
       <main className="App">
-        <TaskForm
-          todo={todo}
-          // amount={amount}
-          // amount={amount}
-          handleTodo={handleTodo}
-          // handleAmount={handleAmount}
-          handleSubmit={handleSubmit}
-          edit={edit}
-        />
-        <TaskList
-          tasks={tasks[month]}
-          handleDelete={handleDelete}
-          handleEdit={handleEdit}
-          clearItems={clearItems}
-        />
+        <Container>
+          <Row>
+            {/* <Col xs={8}>
+             */}
+            <Col md={{ span: 8, offset: 2 }}>
+              <Card.Body className="sub-card">
+                <Card.Header as="h5">My TODO</Card.Header>
+                <Card.Body>
+                  {alert.show && <Alert type={alert.type} text={alert.text} />}
+                  <Alert />
+                  <TaskForm
+                    todo={todo}
+                    handleTodo={handleTodo}
+                    handleSubmit={handleSubmit}
+                    edit={edit}
+                  />
+
+                  <TaskList
+                    tasks={tasks[month]}
+                    handleDelete={handleDelete}
+                    handleEdit={handleEdit}
+                    // handleComplete={handleComplete}
+                    clearItems={clearItems}
+                  />
+                </Card.Body>
+              </Card.Body>
+            </Col>
+          </Row>
+        </Container>
       </main>
 
       <h3>Random Quotes: Work hard dream Big</h3>

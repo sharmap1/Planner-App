@@ -1,4 +1,6 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
@@ -8,12 +10,12 @@ function NavDropdownExample() {
       <Nav className="Navbar">
         <Nav.Item>
           <Nav.Link eventKey="1" href="#/home">
-            Home
+            My Planner
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="2" title="Item">
-            My Daily Tasks List
+            My Daily TODO
           </Nav.Link>
         </Nav.Item>
         <NavDropdown title="Dropdown" id="nav-dropdown">
