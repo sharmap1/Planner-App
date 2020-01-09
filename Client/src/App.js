@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import logo from "./logo.svg";
 import "./App.css";
 import TaskList from "./components/TaskList";
 import TaskForm from "./components/TaskForm";
@@ -9,32 +8,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/Nav";
 import { Col, Row, Container, Card } from "react-bootstrap";
 
-// const uuidv4 = require("uuid/v4");
-
 const initialTasks = {
   January: [],
   February: [],
   March: []
 };
-// { id: uuid(), charge: "rent", amount: 1600 },
-// { id: uuid(), charge: "car payment", amount: 400 },
-// { id: uuid(), charge: "credit card bill", amount: 100 }
-//hashmap
-
-// console.log(initialExpenses);
-// import useState
-// is a function returns [] with two values
-// the actual value of the STATE-1 value
-// function for updates/control- 2 value
-// default value
 
 function App() {
-  // class based component
-  // state = {tasks: initialExpenses}
-  // this.setStaate({})
-  // console.log(useState());
-  // const result = useState(initialExpenses);
-  // -----------short function
   //***********state values************
   //all tasks, add task
   const [tasks, setTasks] = useState(initialTasks);
@@ -50,9 +30,7 @@ function App() {
   const [id, setId] = useState(0);
   //month
   const [month, setMonth] = useState("January");
-  // add drop down++++
-
-  // setmonth fun
+  // setmonth function
 
   //***********functionality************
 
@@ -62,18 +40,12 @@ function App() {
     // console.log(`charge: ${e.target.value}`);
   };
 
-  //handle amount
-  // const handleAmount = e => {
-  // setAmount(e.target.value);
-  // console.log(`amount: ${e.target.value}`);
-  // };
-
   //handle alert
   const handleAlert = ({ type, text }) => {
     setAlert({ show: true, type, text });
     setTimeout(() => {
       setAlert({ show: false });
-    }, 5000);
+    }, 3000);
   };
 
   //handle submit
@@ -89,13 +61,13 @@ function App() {
         });
         setTasks(tempTasks);
         setEdit(false);
-        handleAlert({ type: "success", text: "task edited" });
+        handleAlert({ type: "success", text: "Task Edited" });
       } else {
         // const singleTasks = { id: uuid(), charge: charge, amount: amount };
         const singleTasks = { id: uuid(), todo: todo };
         tempTasks[month] = [...tasks[month], singleTasks];
         setTasks(tempTasks);
-        handleAlert({ type: "success", text: "task added" });
+        handleAlert({ type: "success", text: "Task Added" });
       }
 
       setTodo("");
@@ -103,7 +75,7 @@ function App() {
     } else {
       handleAlert({
         type: "danger",
-        text: `task can't be empty value; time has to be in number value`
+        text: "Task Can't Be Empty"
       });
     }
   };
@@ -113,7 +85,7 @@ function App() {
     let tempTasks = { ...tasks };
     tempTasks[month] = [];
     setTasks(tempTasks);
-    handleAlert({ type: "danger", text: "All task-deleted" });
+    handleAlert({ type: "danger", text: "All Task-Deleted" });
   };
 
   // handle delete
@@ -123,33 +95,21 @@ function App() {
     tempTasks[month] = tasks[month].filter(item => item.id !== id);
     // console.log(tempTasks);
     setTasks(tempTasks);
-    handleAlert({ type: "danger", text: "task-deleted" });
+    handleAlert({ type: "danger", text: "Task-Deleted" });
   };
 
   // handle edit
   const handleEdit = id => {
     // console.log(`item edited:  ${id}`);
     let task = tasks[month].find(item => item.id === id);
-    // let { charge, amount } = task;
     let { todo } = task;
     setTodo(todo);
-    // setAmount(amount);
     setEdit(true);
     setId(id);
   };
-  // newExpenses.splice(index, 1);
-
-  // -----------long function for const result
-  // const tasks = result[0];
-  // const setTasks = result[1];
-  // -----------long function for const result
-  // console.log(tasks, setTasks);
-  // console.log(charge, amount);
 
   return (
     <>
-      <Nav />
-
       <main className="App">
         <Container>
           <Row>
@@ -157,16 +117,20 @@ function App() {
              */}
             <Col md={{ span: 8, offset: 2 }}>
               <Card.Body className="sub-card">
+                <Nav />
+                <Card.Body> </Card.Body>
+
                 <Card.Header as="h5">My TODO</Card.Header>
                 <Card.Body>
-                  {alert.show && <Alert type={alert.type} text={alert.text} />}
-                  <Alert />
                   <TaskForm
                     todo={todo}
                     handleTodo={handleTodo}
                     handleSubmit={handleSubmit}
                     edit={edit}
                   />
+                  <Alert />
+                  {alert.show && <Alert type={alert.type} text={alert.text} />}
+                  <Card.Body> </Card.Body>
 
                   <TaskList
                     tasks={tasks[month]}
@@ -176,13 +140,13 @@ function App() {
                     clearItems={clearItems}
                   />
                 </Card.Body>
+
+                <Card.Footer className="quote">Work hard dream Big</Card.Footer>
               </Card.Body>
             </Col>
           </Row>
         </Container>
       </main>
-
-      <h3>Random Quotes: Work hard dream Big</h3>
     </>
   );
 }

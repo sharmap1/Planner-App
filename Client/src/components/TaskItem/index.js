@@ -4,13 +4,11 @@ import { MdEdit, MdDelete, MdCheck } from "react-icons/md";
 
 const TaskItem = ({ task, handleDelete, handleEdit, handleComplete }) => {
   console.log("TaskItem: ", task);
-  // const { id, charge, amount } = task;
   const { id, todo } = task;
   return (
     <li className="item">
       <div className="info">
         <span className="task">{todo}</span>
-        {/* <span className="amount">$ {amount}</span> */}
       </div>
       <div>
         <span

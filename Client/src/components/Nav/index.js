@@ -18,7 +18,13 @@ function NavDropdownExample() {
             My Daily TODO
           </Nav.Link>
         </Nav.Item>
-        <NavDropdown title="Dropdown" id="nav-dropdown">
+        <NavDropdown title="Week View" id="nav-dropdown">
+          <NavDropdown.Item eventKey="4.1">Week-1</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.2">Week-2</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.3">Week-3</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.4">Week-4</NavDropdown.Item>
+        </NavDropdown>
+        <NavDropdown title="Month View" id="nav-dropdown">
           <NavDropdown.Item eventKey="4.1">January</NavDropdown.Item>
           <NavDropdown.Item eventKey="4.2">February</NavDropdown.Item>
           <NavDropdown.Item eventKey="4.3">March</NavDropdown.Item>
@@ -37,6 +43,3 @@ function NavDropdownExample() {
   );
 }
 export default NavDropdownExample;
-// export default react-bootstrap/Nav;
-
-// export default NavDropdownExample;

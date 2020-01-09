@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../TaskItem";
-import { MdDelete } from "react-icons/md";
-import { Form, Button, Col, Row, Container } from "react-bootstrap";
+// import { MdDelete } from "react-icons/md";
+import { Form, Button, Col, Row } from "react-bootstrap";
 
 const TaskList = ({
   tasks,
@@ -12,14 +12,8 @@ const TaskList = ({
 }) => {
   return (
     <>
-      {/* <Container>
-        <Row>
-          <Col xs={12} md={6}> */}
       <Form.Group as={Row} controlId="formHorizontalEmail">
         <Col sm={10}>
-          {/* <Form.Control /> */}
-          {/* <ul className="List"> */}
-          {/* <ul> */}
           {tasks.map((task, index) => {
             return (
               <Item
@@ -38,18 +32,13 @@ const TaskList = ({
                 className="delete-all"
                 onClick={clearItems}
               >
-                Clear task
-                <MdDelete className="btn-icon" />
+                Clear all tasks
+                {/* <MdDelete className="btn-icon" /> */}
               </Button>
             </>
           )}
-
-          {/* </ul> */}
         </Col>
       </Form.Group>
-      {/* </Col>
-        </Row>
-      </Container> */}
     </>
   );
 };
