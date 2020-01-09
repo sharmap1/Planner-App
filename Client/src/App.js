@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-import TaskList from "./components/task_input/TaskList";
-import TaskForm from "./components/task_input/TaskForm";
-import Alert from "./components/task_input/Alert";
+import TaskList from "./components/TaskList";
+import TaskForm from "./components/TaskForm";
+import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nav from "./components/task_input/Nav";
+import Nav from "./components/Nav";
 
 // const uuidv4 = require("uuid/v4");
 

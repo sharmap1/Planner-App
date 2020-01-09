@@ -3,7 +3,7 @@ const PORT = process.env.PORT || 4000;
 const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
-const routes = require('./routes/routes.index');
+//const routes = require('./routes/routes.index');
 
 // Define middleware here
 app.use(cors())
@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 };
 // Define API routes here
-app.use(routes);
+//app.use(routes);
 // connect to Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://user:password1@ds035310.mlab.com:35310/heroku_mmkdvd75",
