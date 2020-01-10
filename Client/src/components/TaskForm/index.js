@@ -12,7 +12,7 @@ const TaskForm = ({ todo, handleTodo, handleSubmit, edit }) => {
           <Form.Label column sm={6}>
             Add Your To Do's
           </Form.Label>
-          <Col sm={10}>
+          <Col sm={12}>
             <Form.Control
               className="form-control"
               type="text"
@@ -25,7 +25,7 @@ const TaskForm = ({ todo, handleTodo, handleSubmit, edit }) => {
             />
           </Col>
 
-          <Col sm={10}>
+          <Col sm={12}>
             <Button
               type="submit"
               className={

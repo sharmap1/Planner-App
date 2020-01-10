@@ -13,7 +13,7 @@ const TaskList = ({
   return (
     <>
       <Form.Group as={Row} controlId="formHorizontalEmail">
-        <Col sm={10}>
+        <Col sm={12}>
           {tasks.map((task, index) => {
             return (
               <Item

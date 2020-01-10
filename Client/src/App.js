@@ -119,7 +119,6 @@ function App() {
               <Card.Body className="sub-card">
                 <Nav />
                 <Card.Body> </Card.Body>
-
                 <Card.Header as="h5">My TODO</Card.Header>
                 <Card.Body>
                   <TaskForm
@@ -140,7 +139,6 @@ function App() {
                     clearItems={clearItems}
                   />
                 </Card.Body>
-
                 <Card.Footer className="quote">Work hard dream Big</Card.Footer>
               </Card.Body>
             </Col>

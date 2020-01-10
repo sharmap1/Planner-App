@@ -6,6 +6,7 @@ const TaskItem = ({ task, handleDelete, handleEdit, handleComplete }) => {
   console.log("TaskItem: ", task);
   const { id, todo } = task;
   return (
+  
     <li className="item">
       <div className="info">
         <span className="task">{todo}</span>
