@@ -7,12 +7,12 @@ const DayQuote = () => {
   const [quote, setQuote] = useState("");
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(
-        "http://api.paperquotes.com/apiv1/quotes/?limit=1&offset=1&order=-likes&order=%3F&tags=flower%2Csun"
-      );
+      const result = await axios("https://api.kanye.rest?format=text");
       // console.log(result.data);
-      setQuote(`${result.data[0].quote} ${result.data[0].author}`);
+      setQuote(`${result.data}`);
+      // console.log("result", result);
     };
+
     fetchData();
   }, []);
 
@@ -28,7 +28,7 @@ const DayQuote = () => {
 
           <p>
             {quote}
-            “Life is trying things to see if they work.” – Ray Bradbury
+            {/* “Life is trying things to see if they work.” – Ray Bradbury */}
           </p>
           {/* </Card.Header> */}
         </Card.Body>
