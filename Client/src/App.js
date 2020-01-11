@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/Nav";
 import DayJoke from "./components/DayJoke";
 import DayQuote from "./components/DayQuote";
+import DayPic from "./components/DayPic";
 import { Col, Row, Container, Card } from "react-bootstrap";
 
 const initialTasks = {
@@ -140,20 +141,34 @@ function App() {
                     clearItems={clearItems}
                   />
                 </Card.Body>
-                <Card.Footer className="quote">Work hard dream Big</Card.Footer>
+                {/* <Card.Footer className="quote">Work hard dream Big</Card.Footer> */}
               </Card.Body>
             </Col>
 
             <Col md={{ span: 3, offset: 0 }}>
               <Card.Body className="joke-card">
+                <Card.Img
+                  variant="top"
+                  src="https://i.ytimg.com/vi/y-VILY1x6RM/hqdefault.jpg"
+                />
                 <Card.Header as="h5">My Jokes</Card.Header>
                 <DayJoke />
               </Card.Body>
             </Col>
             <Col md={{ span: 3, offset: 0 }}>
-              <Card.Body className="joke-card">
+              <Card.Body className="quote-card">
+                <Card.Img
+                  variant="top"
+                  src="http://beautyharmonylife.com/wp-content/uploads/2013/09/431217-1024x768-pine-island-800x600.jpg"
+                />
                 <Card.Header as="h5">My Quotes</Card.Header>
                 <DayQuote />
+              </Card.Body>
+            </Col>
+            <Col md={{ span: 3, offset: 0 }}>
+              <Card.Body className="pic-card">
+                <Card.Header as="h5">My Pictures</Card.Header>
+                <DayPic />
               </Card.Body>
             </Col>
           </Row>

@@ -3,7 +3,7 @@
 }
 
 .item {
-  background-color: seashell;
+  background-color: orchid;
   line-height: 1.5rem;
   padding: 10px 10px;
   margin-bottom: 1rem;
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   transition: all 0.3s linear;
-  color: black;
+  color: white;
   border-radius: 1rem;
 }
 .item:hover {
@@ -21,7 +21,7 @@
 }
 .Navbar {
   /* border-radius: 1rem; */
-  background-color: thistle;
+  background-color:darkslateblue;
   font-size: 18px;
   text-align: center;
   color: black;
@@ -68,8 +68,8 @@ h3 {
 }
 
 .sub-card {
-  background-color: thistle;
-  color: purple;
+  background-color: purple;
+  color: white;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -80,11 +80,26 @@ h3 {
   transform: scale(1.05);
 } */
 .joke-card {
-  background-color: silver;
+  background-color: cadetblue;
+  color: white;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.quote-card {
+  background-color: darkkhaki;
+  color: white;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.pic-card {
+  background-color: peachpuff;
   color: purple;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  float: right;
 }
 .quote {
   font-style: italic;
