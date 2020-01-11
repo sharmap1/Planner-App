@@ -4,14 +4,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col } from "react-bootstrap";
 
 const DayPic = () => {
-  const [quote, setQuote] = useState("");
+  const [giphy, setImage] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        "http://api.paperquotes.com/apiv1/quotes/?limit=1&offset=1&order=-likes&order=%3F&tags=flower%2Csun"
+        "https://api.giphy.com/v1/gifs/search?q=cats&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=100"
       );
-      // console.log(result.data);
-      setQuote(`${result.data[0].quote} ${result.data[0].author}`);
+      // let random = math.floor(math.random)
+      // console.log("result", result.data.data[0].images.downsized_large.url);
+      setImage(`${result.data.data[99].images.downsized_large.url}`);
     };
     fetchData();
   }, []);
@@ -20,16 +21,10 @@ const DayPic = () => {
     <>
       <Col md={{ span: 3, offset: 0 }}>
         <Card.Body className="pic-card">
-          <Card.Img
-            variant="top"
-            src="https://media.giphy.com/media/kreQ1pqlSzftm/giphy.gif"
-          />
+          <Card.Img variant="top" src={giphy} />
           <Card.Header as="h5">My Giphy</Card.Header>
 
-          <p>
-            {quote}
-            Cute giphy images will be loaded to refresh the day
-          </p>
+          <p> Cute Giphy images to refresh your day</p>
           {/* </Card.Header> */}
         </Card.Body>
       </Col>
@@ -37,3 +32,8 @@ const DayPic = () => {
   );
 };
 export default DayPic;
+
+// var queryURL =
+//   "https://api.giphy.com/v1/gifs/search?q=" +
+//   animal +
+//   "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
