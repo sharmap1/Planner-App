@@ -5,13 +5,14 @@ import TaskForm from "./components/TaskForm";
 import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 import DayJoke from "./components/DayJoke";
 import DayQuote from "./components/DayQuote";
 import DayPic from "./components/DayPic";
 import DatePicker from "./components/DatePicker";
 import DaySport from "./components/DaySport";
 import DayWeather from "./components/DayWeather";
+import { Header } from "./components/Header";
 
 import { Col, Row, Container, Card } from "react-bootstrap";
 
@@ -121,7 +122,7 @@ function App() {
         <Container>
           <Row>
             <Col md={{ span: 12, offset: 0 }}>
-              <Nav />
+              <Header />
             </Col>
 
             <Col md={{ span: 6, offset: 0 }}>
