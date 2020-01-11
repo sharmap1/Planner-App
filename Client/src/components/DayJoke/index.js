@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-// import { Card } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 
 const DayJoke = () => {
   const [joke, setJoke] = useState("");
@@ -19,9 +18,17 @@ const DayJoke = () => {
 
   return (
     <>
-      <div className="joke-card">
-        <p>{joke}</p>
-      </div>
+      <Col md={{ span: 3, offset: 0 }}>
+        <Card.Body className="joke-card">
+          <Card.Img
+            variant="top"
+            src="https://i.ytimg.com/vi/y-VILY1x6RM/hqdefault.jpg"
+          />
+          <Card.Header as="h5">My Jokes</Card.Header>
+          <p>{joke}</p>
+          {/* <DayJoke /> */}
+        </Card.Body>
+      </Col>
     </>
   );
 };

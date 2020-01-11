@@ -3,7 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col } from "react-bootstrap";
 
-const DayQuote = () => {
+const DayWeather = () => {
   const [quote, setQuote] = useState("");
   useEffect(() => {
     const fetchData = async () => {
@@ -19,16 +19,16 @@ const DayQuote = () => {
   return (
     <>
       <Col md={{ span: 3, offset: 0 }}>
-        <Card.Body className="quote-card">
+        <Card.Body className="weather-card">
           <Card.Img
             variant="top"
-            src="http://beautyharmonylife.com/wp-content/uploads/2013/09/431217-1024x768-pine-island-800x600.jpg"
+            src="https://www.sketchappsources.com/resources/source-image/weather-app-background-premgurusamy.png"
           />
-          <Card.Header as="h5">My Quotes</Card.Header>
+          <Card.Header as="h5">My Weather</Card.Header>
 
           <p>
             {quote}
-            “Life is trying things to see if they work.” – Ray Bradbury
+            Latest update and information on weather
           </p>
           {/* </Card.Header> */}
         </Card.Body>
@@ -36,4 +36,4 @@ const DayQuote = () => {
     </>
   );
 };
-export default DayQuote;
+export default DayWeather;

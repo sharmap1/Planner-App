@@ -21,7 +21,7 @@
 }
 .Navbar {
   /* border-radius: 1rem; */
-  background-color:darkslateblue;
+  background-color: darkslateblue;
   font-size: 18px;
   text-align: center;
   color: black;
@@ -94,13 +94,38 @@ h3 {
   margin-bottom: 2rem;
 }
 .pic-card {
-  background-color: peachpuff;
-  color: purple;
+  background-color: dimgray;
+  color: white;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   float: right;
 }
+.date-picker {
+  background-color: chocolate;
+  color: white;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  float: right;
+}
+.sport-card {
+  background-color: limegreen;
+  color: white;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  float: right;
+}
+.weather-card {
+  background-color: darkred;
+  color: white;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  float: right;
+}
+
 .quote {
   font-style: italic;
   text-align: center;
