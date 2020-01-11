@@ -6,6 +6,8 @@ import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/Nav";
+import DayJoke from "./components/DayJoke";
+import DayQuote from "./components/DayQuote";
 import { Col, Row, Container, Card } from "react-bootstrap";
 
 const initialTasks = {
@@ -113,12 +115,11 @@ function App() {
       <main className="App">
         <Container>
           <Row>
-            {/* <Col xs={8}>
-             */}
-            <Col md={{ span: 8, offset: 2 }}>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Nav />
+            </Col>
+            <Col md={{ span: 6, offset: 0 }}>
               <Card.Body className="sub-card">
-                <Nav />
-                <Card.Body> </Card.Body>
                 <Card.Header as="h5">My TODO</Card.Header>
                 <Card.Body>
                   <TaskForm
@@ -140,6 +141,19 @@ function App() {
                   />
                 </Card.Body>
                 <Card.Footer className="quote">Work hard dream Big</Card.Footer>
+              </Card.Body>
+            </Col>
+
+            <Col md={{ span: 3, offset: 0 }}>
+              <Card.Body className="joke-card">
+                <Card.Header as="h5">My Jokes</Card.Header>
+                <DayJoke />
+              </Card.Body>
+            </Col>
+            <Col md={{ span: 3, offset: 0 }}>
+              <Card.Body className="joke-card">
+                <Card.Header as="h5">My Quotes</Card.Header>
+                <DayQuote />
               </Card.Body>
             </Col>
           </Row>

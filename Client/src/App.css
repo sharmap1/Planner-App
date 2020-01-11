@@ -1,15 +1,13 @@
-/* .App {
-  background-color: antiquewhite;
-} */
-#root {
+.App {
   background-color: black;
 }
+
 .item {
-  background-color: powderblue;
+  background-color: seashell;
   line-height: 1.5rem;
   padding: 10px 10px;
   margin-bottom: 1rem;
-  border: 1px solid #e0e0e0;
+  border: 1px solid lightgray;
   display: flex;
   justify-content: space-between;
   transition: all 0.3s linear;
@@ -22,21 +20,14 @@
   /* border-radius: 1rem; */
 }
 .Navbar {
-  border-radius: 1rem;
-  background-color: linen;
-  font-size: 14px;
+  /* border-radius: 1rem; */
+  background-color: thistle;
+  font-size: 18px;
   text-align: center;
   color: black;
+  margin-bottom: 10px;
 }
-/* .alert {
-  border-radius: 1rem;
-} */
 
-.Navbar:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  transform: scale(1.05);
-  border-radius: 1rem;
-}
 .clear-btn {
   color: red;
   border: none;
@@ -77,18 +68,24 @@ h3 {
 }
 
 .sub-card {
-  background-color: ivory;
+  background-color: thistle;
   color: purple;
   border-radius: 2rem;
-  margin-top: 5rem;
-  margin-bottom: 15rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 /* .sub-card:hover {
   background-color: purple;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transform: scale(1.05);
 } */
-
+.joke-card {
+  background-color: silver;
+  color: purple;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .quote {
   font-style: italic;
   text-align: center;
