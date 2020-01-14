@@ -17,9 +17,10 @@ if (process.env.NODE_ENV === "production") {
 //app.use(routes);
 // connect to Mongo DB
 mongoose.connect(
+  // TODO- set up mlab on heroku and replace credentials below
   process.env.MONGODB_URI || "mongodb://user:password1@ds035310.mlab.com:35310/heroku_mmkdvd75",
   { useNewUrlParser: true }
- 
+
 );
 //PORT listening on 
 app.listen(PORT, () => {
