@@ -2,8 +2,7 @@ import React from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { Form, Button, FormControl, Navbar } from "react-bootstrap";
+import { Form, Button, Navbar } from "react-bootstrap";
 
 import "./style.css";
 
@@ -16,9 +15,6 @@ function NavDropdownExample() {
           <Nav.Link href="#home">My TODO</Nav.Link>
           <Nav.Link href="#features">My Fun Page</Nav.Link>
         </Nav>
-        <Form inline>
-          <Button variant="outline-light">Logout</Button>
-        </Form>
       </Navbar>
     </>
   );
