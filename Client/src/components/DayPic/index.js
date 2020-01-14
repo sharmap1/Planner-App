@@ -8,10 +8,11 @@ const DayPic = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        "https://api.giphy.com/v1/gifs/search?q=cats&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=100"
+        "https://api.giphy.com/v1/gifs/search?q=animals&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=100"
       );
-      let random = Math.floor(Math.random()*100)
-      
+
+      let random = Math.floor(Math.random() * 100);
+
       setImage(`${result.data.data[random].images.downsized_large.url}`);
     };
     fetchData();
