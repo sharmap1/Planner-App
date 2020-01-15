@@ -21,13 +21,13 @@ router.delete('/delete', (req, res) =>{
     // task strikethrough
     // TODO-------------
 // my Jokes routes
-router.get('/jokes', (req, res) =>{
-    res.render('index')
-});
+// router.get('/jokes', (req, res) =>{
+//     res.render('index')
+// });
 // My Quotes routes
-router.get('/quotes', (req, res) =>{
-    res.render('index')
-});
+// router.get('/quotes', (req, res) =>{
+//     res.render('index')
+// });
 // calendar routes
 // TODO------------
 
