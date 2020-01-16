@@ -10,10 +10,10 @@ function NavDropdownExample() {
   return (
     <>
       <Navbar bg="info" variant="info">
-        <Navbar.Brand href="#home">My Planner</Navbar.Brand>
+        <Navbar.Brand>My Planner</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">My TODO</Nav.Link>
-          <Nav.Link href="#features">My Fun Page</Nav.Link>
+          <Nav.Link href="/">My TODO</Nav.Link>
+          <Nav.Link href="/ fu">My Fun Page</Nav.Link>
         </Nav>
       </Navbar>
     </>

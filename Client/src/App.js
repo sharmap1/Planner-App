@@ -5,7 +5,8 @@ import TaskForm from "./components/TaskForm";
 import Alert from "./components/Alert";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Nav from "./components/Nav";
+import Nav from "./components/Nav";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import DayJoke from "./components/DayJoke";
 import DayQuote from "./components/DayQuote";
 import DayPic from "./components/DayPic";
@@ -14,8 +15,7 @@ import DaySport from "./components/DaySport";
 import DayWeather from "./components/DayWeather";
 import { Header } from "./components/Header";
 
-
-import { Col, Row, Container, Card } from "react-bootstrap";
+import { Col, Row, Container, Card, Jumbotron } from "react-bootstrap";
 
 const initialTasks = {
   January: [],
@@ -120,13 +120,19 @@ function App() {
   return (
     <>
       <main className="App">
-        <Container>
+        <Container fluid>
           <Row>
-            <Col md={{ span: 12, offset: 0 }}>
-              <Header />
+            <Col md="12">
+              <Nav />
+            </Col>
+          </Row>
+          <Row>
+            <Col md="2">
+              <DayQuote />
+              <DayJoke />
             </Col>
 
-            <Col md={{ span: 6, offset: 0 }}>
+            <Col md="8">
               <Card.Body className="sub-card">
                 <Card.Header as="h5">My TODO</Card.Header>
                 <Card.Body>
@@ -150,21 +156,14 @@ function App() {
                 </Card.Body>
               </Card.Body>
             </Col>
-            <DayJoke />
-            <DayQuote />
+            <Col md="2">
+              <DayWeather />
+              <DayPic />
+            </Col>
           </Row>
-          <Row>
-            <DatePicker />
-            <DaySport />
-            <DayPic />
-            <DayWeather />
-          </Row>
+          {/* </Row> */}
+          {/* </Row> */}
         </Container>
-        {/* <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/saved" component={Saved} />
-          <Route component={NoMatch} />
-        </Switch> */}
       </main>
     </>
   );

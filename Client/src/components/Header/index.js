@@ -25,15 +25,15 @@ export class Header extends React.Component {
       var outside = "";
 
       if (hours < 5) {
-        outside = " GET SOME SLEEP!";
+        outside = " Get Some Sleep!";
       } else if (hours < 12) {
-        outside = " MORNING";
+        outside = " Morning";
       } else if (hours < 16) {
-        outside = " NOON";
+        outside = " Noon";
       } else if (hours < 20) {
-        outside = " EVENING";
+        outside = " Evening";
       } else if (hours <= 23) {
-        outside = " NIGHT";
+        outside = " Night";
       } else {
         outside = "";
       }
@@ -52,15 +52,7 @@ export class Header extends React.Component {
     var month = currentTime.getMonth() + 1;
     var year = currentTime.getFullYear();
     var din = currentTime.getDay();
-    var days = [
-      "SUNDAY",
-      "MONDAY",
-      "TUESDAY",
-      "WEDNESDAY",
-      "THURSDAY",
-      "FRIDAY",
-      "SATURDAY"
-    ];
+    var days = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
 
     if (day < 10) {
       day = "0" + day;
@@ -78,14 +70,14 @@ export class Header extends React.Component {
   render() {
     return (
       <div className="header">
-        <Nav />
+        {/* <Nav /> */}
         <div className="cell datetime">
           <div className="date_line">
-            &nbsp;{this.state.d}
-            <span className="meme">
-              {this.state.day} ~ &nbsp;{this.state.timeRightNow}{" "}
-              {this.state.bahar}
-            </span>
+            <p>SEATTLE</p>
+            <p className="meme">{this.state.day} </p>
+            <p>&nbsp;{this.state.d}</p>
+            <p className="meme">{this.state.bahar}</p>
+            <p> &nbsp;{this.state.timeRightNow}</p>
           </div>
           {/* <div className="time_line">
                        </span>
@@ -101,4 +93,4 @@ export class Header extends React.Component {
   }
 }
 
-export default setInterval;
+export default Header;

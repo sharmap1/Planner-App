@@ -3,15 +3,15 @@
 }
 
 .item {
-  background-color: orchid;
+  background-color: khaki;
   line-height: 1.5rem;
   padding: 10px 10px;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
   border: 1px solid lightgray;
   display: flex;
   justify-content: space-between;
   transition: all 0.3s linear;
-  color: white;
+  color: black;
   border-radius: 1rem;
 }
 .item:hover {
@@ -58,7 +58,7 @@ h1 {
   text-align: center;
   text-transform: capitalize;
   margin: 2rem 0;
-  color: white;
+  color: pink;
   font-family: "Roboto", sans-serif;
 }
 h3 {
@@ -71,8 +71,8 @@ h3 {
 }
 
 .sub-card {
-  background-color: purple;
-  color: white;
+  background-color: papayawhip;
+  color: teal;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -84,6 +84,7 @@ h3 {
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: smaller;
 }
 .quote-card {
   background-color: darkkhaki;
@@ -91,42 +92,43 @@ h3 {
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: smaller;
 }
 .pic-card {
+  font-size: smaller;
   background-color: dimgray;
   color: white;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  float: right;
 }
 .date-picker {
+  font-size: smaller;
   background-color: chocolate;
   color: white;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  float: right;
 }
 .sport-card {
+  font-size: smaller;
   background-color: limegreen;
   color: white;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  float: right;
 }
 .weather-card {
+  font-size: small;
   background-color: darkred;
   color: white;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  float: right;
 }
 
-.quote {
+/* .quote {
   font-style: italic;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
+} */

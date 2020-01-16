@@ -20,13 +20,11 @@ const DayPic = () => {
 
   return (
     <>
-      <Col md={{ span: 3, offset: 0 }}>
+      {/* <Col md={{ span: 3, offset: 0 }}> */}
+      <Col md="12">
         <Card.Body className="pic-card">
           <Card.Img variant="top" src={giphy} />
           <Card.Header as="h5">My Giphy</Card.Header>
-
-          <p> Cute Giphy images to refresh your day</p>
-          {/* </Card.Header> */}
         </Card.Body>
       </Col>
     </>
