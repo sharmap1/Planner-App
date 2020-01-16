@@ -1,114 +1,168 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import React from 'react'
 
-// fake data generator
-const getItems = count =>
-  Array.from({ length: count }, (v, k) => k).map(k => ({
-    id: `item-${k}`,
-    content: `item ${k}`,
-    test: "column"
-  }));
+export class DisplayToday extends React.Component{
 
-// a little function to help us with reordering the result
-const reorder = (list, startIndex, endIndex) => {
-  const result = Array.from(list);
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
-
-  return result;
-};
-
-const grid = 8;
-
-const getItemStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the items look a bit nicer
-  userSelect: "none",
-
-  // change background colour if dragging
-  background: isDragging ? "lightgreen" : "grey",
-
-  // styles we need to apply on draggables
-  ...draggableStyle
-});
-
-const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? "lightblue" : "lightgrey",
-  padding: grid,
-  width: 250
-});
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: getItems(10)
-    };
-    this.onDragEnd = this.onDragEnd.bind(this);
-  }
-
-  onDragEnd(result) {
-    // dropped outside the list
-    if (!result.destination) {
-      return;
-    }
-
-    const items = reorder(
-      this.state.items,
-      result.source.index,
-      result.destination.index
-    );
-
-    this.setState({
-      items
-    });
-  }
-
-  // Normally you would want to split things out into separate components.
-  // But in this example everything is just done in one place for simplicity
-  render() {
-    return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        <Droppable droppableId="droppable">
-          {(provided, snapshot) => (
-            <table
-              ref={provided.innerRef}
-              style={getListStyle(snapshot.isDraggingOver)}
-            >
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Test</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.items.map((item, index) => (
-                  <Draggable key={item.id} draggableId={item.id} index={index}>
-                    {(provided, snapshot) => (
-                      <tr
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                        {...provided.dragHandleProps}
-                        style={getItemStyle(
-                          snapshot.isDragging,
-                          provided.draggableProps.style
-                        )}
-                      >
-                        <td style={{ width: "120px" }}>{item.content}</td>
-                        <td style={{ width: "120px" }}>{item.test}</td>
-                      </tr>
-                    )}
-                  </Draggable>
-                ))}
-                {provided.placeholder}
-              </tbody>
-            </table>
-          )}
-        </Droppable>
-      </DragDropContext>
-    );
+constructor(props){
+  super(props);
+  this.state = {
+    'todayTimingLeftHrs': '',
+    'todayTimingLeftMins': ''
   }
 }
 
-// Put the thing into the DOM!
-ReactDOM.render(<App />, document.getElementById("root"));
+componentDidMount(){
+  var currentTime = new Date();
+    
+  setInterval( () => {
+    var minuteSec = currentTime.getMinutes() * 60;
+    var hoursSec = currentTime.getHours() * 3600;
+    var oneDay = 86400;
+
+    var todayTimingLeftHrs = Math.floor((oneDay-(hoursSec+minuteSec))/3600);
+    var todayTimingLeftMins = 60-currentTime.getMinutes();   
+    this.setState({
+      'todayTimingLeftHrs': todayTimingLeftHrs,
+      'todayTimingLeftMins': todayTimingLeftMins
+    });
+  }, 1000)
+}
+
+    removeThis(e){
+      this.props.deleteItem(e, 'Today');
+    }
+    render(){
+      return(
+          <div className="cell">
+          <div className="boxx boxx1">
+          <div className="alert">Today<span className="time-left"> {this.state.todayTimingLeftHrs} hr {this.state.todayTimingLeftMins} Min left</span></div>
+
+           {this.props.items.map((item, index) => {
+              return(
+                <div key={index} className="listitems">
+                  <div className="cell">
+                    <div className="cell content-title">
+                    <div className="minus" onClick={() => this.removeThis(index)}><div className="minusline onearm"></div><div className="minuslinee secondarm"></div></div>&nbsp;{item} &nbsp;                    
+                    </div>
+                  </div>
+                </div>
+
+          );
+            })
+            }
+          </div>
+          </div>
+      )
+    }
+  }
+  
+export class DisplayTomorrow extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      'tomorrowTimingLeft': ''
+    }
+  }
+  componentDidMount(){
+    var currentTime = new Date();
+      
+    setInterval( () => {
+  
+      var minuteSec = currentTime.getMinutes() * 60;
+      var hoursSec = currentTime.getHours() * 3600;
+      var oneDay = 86400;
+      var twoDay = oneDay * 2;
+      
+      var tomorrowTimingLeft = Math.floor((twoDay-(hoursSec+minuteSec))/3600);
+      
+      this.setState({
+        'tomorrowTimingLeft': tomorrowTimingLeft
+      });
+    }, 1000)
+  }
+
+  removeThis(e){
+      this.props.deleteItem(e, 'Tomorrow');
+    }
+    render(){
+      return(
+        <div className="cell">
+        <div className="boxx boxx2">
+        <div className="alert alert-success">Tomorrow<span className="time-left"> {this.state.tomorrowTimingLeft} hr left</span></div>
+
+
+           {this.props.items.map((item, index) => {
+              return(
+                <div key={index} className="listitems">
+                  <div className="cell">
+                    <div className="content-title">
+                    <div className="minus" onClick={() => this.removeThis(index)}><div className="minusline onearm"></div><div className="minuslinee secondarm"></div></div>&nbsp;{item} &nbsp;
+                     </div>
+                  </div>
+                </div>
+
+          );
+            })
+            }
+            </div>
+          </div>
+      )
+    }
+  }
+  
+  
+export class DisplayDayAfterTomorrow extends React.Component{
+ 
+  constructor(props){
+    super(props);
+    this.state = {
+      'dayAfterTomorrowTimingLeft': ''
+    }
+  }
+
+  componentDidMount(){
+    var currentTime = new Date();
+      
+    setInterval( () => {
+  
+      var minuteSec = currentTime.getMinutes() * 60;
+      var hoursSec = currentTime.getHours() * 3600;
+      var oneDay = 86400;
+      var threeDay = oneDay * 3;
+  
+      var dayAfterTomorrowTimingLeft = Math.floor((threeDay-(hoursSec+minuteSec))/3600);
+  
+      this.setState({
+        'dayAfterTomorrowTimingLeft': dayAfterTomorrowTimingLeft
+      });
+  
+    }, 1000)
+  }
+ 
+  removeThis(e){
+      this.props.deleteItem(e, 'Day_After_Tomorrow');
+    }
+    render(){
+      return(
+        <div className="cell">
+        <div className="boxx boxx3">
+
+        <div className="alert alert-success">Day after Tomorrow<span className="time-left"> {this.state.dayAfterTomorrowTimingLeft} hr left</span></div>
+        {this.props.items.map((item, index) => {
+              return(
+                <div key={index} className="listitems">
+                  <div className="cell">
+                    <div className="content-title">
+                      <div className="minus" onClick={() => this.removeThis(index)}><div className="minusline onearm"></div><div className="minuslinee secondarm"></div></div>&nbsp;{item} &nbsp;
+                    </div>
+                  </div>
+                </div>
+              );
+            })
+            }
+            </div>
+          </div>
+      )
+    }
+  }
+  
+  

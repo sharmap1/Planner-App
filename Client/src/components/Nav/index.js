@@ -1,6 +1,4 @@
 import React from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
 import Nav from "react-bootstrap/Nav";
 import { Form, Button, Navbar } from "react-bootstrap";
 
@@ -10,10 +8,10 @@ function NavDropdownExample() {
   return (
     <>
       <Navbar bg="info" variant="info">
-        <Navbar.Brand href="#home">My Planner</Navbar.Brand>
+        <Navbar.Brand href="/">My Planner</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">My TODO</Nav.Link>
-          <Nav.Link href="#features">My Fun Page</Nav.Link>
+          <Nav.Link href="ThreeDay">My Three Day Planner</Nav.Link>
+          <Nav.Link href="FunPage">My Fun Page</Nav.Link>
         </Nav>
       </Navbar>
     </>
