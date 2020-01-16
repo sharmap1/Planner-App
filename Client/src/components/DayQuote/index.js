@@ -18,7 +18,8 @@ const DayQuote = () => {
 
   return (
     <>
-      <Col md={{ span: 3, offset: 0 }}>
+      {/* <Col md={{ span: 3, offset: 0 }}> */}
+      <Col md="12">
         <Card.Body className="quote-card">
           <Card.Img
             variant="top"

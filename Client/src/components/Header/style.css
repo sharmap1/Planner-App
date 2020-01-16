@@ -1,8 +1,11 @@
 .date_line {
   color: white;
-  font-size: 18px;
+  font-size: small;
 }
 .time_line {
   color: white;
-  font-size: 18px;
+  font-size: small;
+}
+.meme{
+  float:right;
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col } from "react-bootstrap";
 import { WiFahrenheit, WiDayRain } from "react-icons/wi";
+import Header from "../Header";
 
 const DayWeather = () => {
   const [weather, setWeather] = useState("");
@@ -20,7 +21,8 @@ const DayWeather = () => {
 
   return (
     <>
-      <Col md={{ span: 3, offset: 0 }}>
+      {/* <Col md={{ span: 3, offset: 0 }}> */}
+      <Col md="12">
         <Card.Body className="weather-card">
           <Card.Img
             variant="top"
@@ -29,11 +31,11 @@ const DayWeather = () => {
           <Card.Header as="h5">My Weather</Card.Header>
 
           <p>
+            <Header />
             <p>
-              <WiDayRain className="weather-btn" />
+              {weather}
+              <WiFahrenheit className="weather-btn" />
             </p>
-            " {weather}
-            <WiFahrenheit className="weather-btn" />"
             {/* Latest update and information on weather */}
           </p>
           {/* </Card.Header> */}
