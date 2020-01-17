@@ -2,6 +2,7 @@ import React, { useState, Component } from "react";
 import TaskList from "../../components/TaskList";
 import TaskForm from "../../components/TaskForm";
 import Alert from "../../components/Alert";
+import App from "../../App.css";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "../../components/Nav";
@@ -17,8 +18,7 @@ const initialTasks = {
   March: []
 };
 
-function FunPage () {
-
+function FunPage() {
   //***********state values************
   //all tasks, add task
   const [tasks, setTasks] = useState(initialTasks);
@@ -117,12 +117,20 @@ function FunPage () {
       <main className="App">
         <Container fluid>
           <Row>
-            <Col md="2">
+            <Col md="3">
               <DayQuote />
+            </Col>
+            <Col md="3">
               <DayJoke />
             </Col>
+            <Col md="3">
+              <DayPic />
+            </Col>
+            <Col md="3">
+              <DayWeather />
+            </Col>
 
-            <Col md="8">
+            {/* <Col md="8">
               <Card.Body className="sub-card">
                 <Card.Header as="h5">My TODO</Card.Header>
                 <Card.Body>
@@ -140,23 +148,16 @@ function FunPage () {
                     tasks={tasks[month]}
                     handleDelete={handleDelete}
                     handleEdit={handleEdit}
-                    // handleComplete={handleComplete}
                     clearItems={clearItems}
                   />
                 </Card.Body>
               </Card.Body>
-            </Col>
-            <Col md="2">
-              <DayWeather />
-              <DayPic />
-            </Col>
+            </Col> */}
           </Row>
-          {/* </Row> */}
-          {/* </Row> */}
         </Container>
       </main>
     </>
   );
-};
+}
 
 export default FunPage;
