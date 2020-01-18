@@ -15,13 +15,12 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(
   // TODO- set up mlab on heroku and replace credentials below
   process.env.MONGODB_URI ||
-    "mongodb://project3:password1@ds263808.mlab.com:63808/heroku_zk6k9vvd",
+  // set up connection to local mongodb
+  "mongodb://localhost/todo" ||
+  // set up connection to mlab database on heroku
+  "mongodb://project3:password1@ds263808.mlab.com:63808/heroku_zk6k9vvd",
   { useNewUrlParser: true }
 );
-// to let us know database connection established
-connection.once("open", () => {
-  console.log("----MongoDB database connection established successfully!----");
-});
 // connect and use router
 const routes = require("./Routes/routes");
 app.use("/", routes);

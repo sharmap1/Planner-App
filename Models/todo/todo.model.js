@@ -11,7 +11,7 @@ const todoSchema = new Schema({
   },
   done: Boolean,
   id_: {
-    type: Mixed,
+    type: String,
     required: true
   }
 });

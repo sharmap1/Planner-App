@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Task = require('../Models/todo');
+const Task = require('../Models/todo/todo.model');
 // TODO: 
 
 // my TODO routes
