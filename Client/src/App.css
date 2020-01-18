@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-body{
-  background-color: black;
-  color: #fff;
-  font-family: monospace;
-}
-.header{
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed #808080;
-  align-items: center;
-}
-.search{
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.search span img{
-  width: 100%;
-  max-width: 50px;
-  min-width: 30px;
-  height: auto;
-}
-.search_input{
-  background: transparent;
-  font-size: large;
-  border: none;
-  color: white;
-  padding-left: 5px;
-}
-.settings{
-  border-left: 1px dashed #808080;
-}
-@-webkit-keyframes myOrbit {
-  0% { -webkit-transform: rotate(0deg); }
-  40%   { -webkit-transform: rotate(20deg) }
-  80% { -webkit-transform: rotate(-10deg); }
-  100% { -webkit-transform: rotate(0deg); }
-}
-@-moz-keyframes myOrbit {
-  0% { -webkit-transform: rotate(0deg); }
-  40%   { -webkit-transform: rotate(20deg) }
-  80% { -webkit-transform: rotate(-10deg); }
-  100% { -webkit-transform: rotate(0deg); }
-=======
 .App {
   background-color: azure;
 }
@@ -58,7 +13,6 @@ body{
   transition: all 0.3s linear;
   color: black;
   border-radius: 1rem;
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
 }
 @-o-keyframes myOrbit {
   0% { -webkit-transform: rotate(0deg); }
@@ -187,17 +141,12 @@ form{
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-<<<<<<< HEAD
-.display_grid .cell{
-  min-width: 350px;
-=======
 h1 {
   text-align: center;
   text-transform: capitalize;
   margin: 2rem 0;
   color: pink;
   font-family: "Roboto", sans-serif;
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
 }
 .listitems{
   padding: 1px;
@@ -231,16 +180,13 @@ h1 {
   background: red;
   border: 0.5px solid black;
   transition: 0.3s ease-in-out;
-
-<<<<<<< HEAD
-=======
+}
 .sub-card {
   background-color: papayawhip;
   color: teal;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
 }
 .minuslinee{
 position: relative;
@@ -262,93 +208,6 @@ transition: 0.3s ease-in-out;
 }
 /* display ends */
 
-<<<<<<< HEAD
-.settings_topbar{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid gray;
-  justify-content: space-between;
-}
-
-.settings_topbar .topbar{
-  height: 60px;
-}
-
-.settings_topbar .topbar button{
-  height: 100% !important;
-  font-size: 40px;
-  font-weight: bold;
-  background-color: #990b0b;
-  color: white;
-  border: none;
-  padding: 0px 10px;
-  cursor: pointer;
-}
-.settings_topbar .topbar button:hover{
-  background-color: #a31e1e;
-  
-}
-.settings_container form{
-  margin-top: 35px;
-  margin-bottom: 20px;
-  padding: 30px;
-  border-bottom: 1px dashed gray;
-}
-.settings_container form button{
-  margin: 0;
-  padding: 10px;
-  width: 300px;
-  
-}
-
-.maker_info{
-  padding: 30px;
-}
-.maker_info a{
-  color: #e7717d;
-}
-@media all and (max-width: 4213px) and (min-width: 1264px){
-  .display_grid .cell{
-      width: 25vw !important;
-  }    
-}
-
-@media all and (max-width: 1264px) and (min-width: 1000px){
-  .display_grid .cell{
-      width: 300px !important;
-  }
-}
-@media all and (max-width: 1000px) and (min-width: 850px){
-  .display_grid .cell{
-      width: 100% !important;
-  }
-}
-@media all and (max-width: 850px) and (min-width: 100px){
-  .display_grid .cell{
-      width: 100% !important;
-  }
-  .header{
-      flex-direction: column;
-      text-align: center;
-  }
-  .settings, .search{
-      display: none;
-  }
-  .salutation{
-      margin: 10px;
-      padding: 5px;
-      border-top: 1px dashed #808080;
-      border-bottom: 1px dashed #808080;
-  }
-  .form-group input{
-      width: 70vw;
-  }
-  .form-group button{
-      width: 50vw;
-  }
-}
-=======
 .joke-card {
   background-color: cadetblue;
   color: white;
@@ -403,4 +262,3 @@ transition: 0.3s ease-in-out;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 } */
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
