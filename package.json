@@ -15,7 +15,8 @@
     "install": "cd Client && npm install",
     "build": "cd Client && npm run build",
     "heroku-postbuild": "npm run build",
-    "deploy": "npm run clean && npm run build && serve -s build"
+    "deploy": "npm run clean && npm run build && serve -s build",
+    "rerun": "npm run clean && npm run build && serve -s build"
   },
   "repository": {
     "type": "git",
