@@ -1,8 +1,8 @@
 import React from 'react';
+import"../../../src/App.css";
 import { DisplayToday, DisplayTomorrow, DisplayDayAfterTomorrow } from '../../components/Display';
 import SimpleSotrage from 'react-simple-storage';
-import { Header } from '../../components/Header';
-import { Credits } from '../../components/Credits'
+import { Header } from "../../components/Header";
 
 class ThreeDay extends React.Component{
   constructor(props){
@@ -118,9 +118,9 @@ class ThreeDay extends React.Component{
   render(){
     if(this.state.showCredit === 'False'){
       return(
-              <div>
+        <div>
+        <Header />
         <SimpleSotrage parent={this} />
-        <Header showCreditFunction={this.showCreditFunction} />
         <br/>
         <Textbox updateEntry={this.updateEntry} />
         <span>{this.state.err}</span>
@@ -137,14 +137,10 @@ class ThreeDay extends React.Component{
       return(
       <div>
         <SimpleSotrage parent={this} />
-        <Header showCreditFunction={this.showCreditFunction} />
         <br/>
         <span>{this.state.err}</span>
         <br/>
         <br/>
-          <div>
-          <Credits hideCreditFunction={this.hideCreditFunction} />
-          </div>
       </div>
         
       )

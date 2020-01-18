@@ -2,8 +2,6 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import { Navbar } from "react-bootstrap";
 
-import "./style.css";
-
 function NavDropdownExample() {
   return (
     <>
@@ -12,6 +10,7 @@ function NavDropdownExample() {
         <Nav className="mr-auto">
           <Nav.Link href="ThreeDay">My Three Day Planner</Nav.Link>
           <Nav.Link href="FunPage">My Fun Page</Nav.Link>
+          <Nav.Link href="Credits"> Credits </Nav.Link>
         </Nav>
       </Navbar>
     </>

@@ -1,6 +1,4 @@
 import React from "react";
-import "./style.css";
-import Nav from "../Nav";
 
 export class Header extends React.Component {
   constructor(props) {
@@ -74,31 +72,24 @@ export class Header extends React.Component {
       day: " " + days[din]
     });
   }
+  handleClickONSetting(event){
+    this.props.showCreditFunction('True');
+  }
 
-  render() {
-    return (
-      <div className="header">
-        <Nav />
-        <div className="cell datetime">
-          <div className="date_line">
-            &nbsp;{this.state.d}
-            <span className="meme">
-              {this.state.day} ~ &nbsp;{this.state.timeRightNow}{" "}
-              {this.state.bahar}
-            </span>
-          </div>
-          {/* <div className="time_line">
-                       </span>
-                    </div> */}
+  render(){
+    return(
+        <div className="header">
+            <div className="cell datetime">
+                <div className="date_line" >
+                    &nbsp;{this.state.d}<span className="dull2">{this.state.day}</span>
+                 </div>
+                <div className="time_line">
+                    &nbsp;{this.state.timeRightNow} <span className="dull2">{this.state.bahar}</span>
+                </div>
+            </div>
         </div>
-        <div className="salutation cell">
-          <div className="name">
-            <span> {this.props.nam} </span>
-          </div>
-        </div>
-      </div>
-    );
+
+    )
   }
 }
-
-export default setInterval;
+export default Header;

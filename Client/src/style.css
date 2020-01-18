@@ -1,0 +1,140 @@
+.form{
+    width: 100%;
+}
+
+input[type="text"]{
+    width: 50rem;
+}
+.threebutton btn-group{
+float: right;    
+}
+.content-title{
+    margin-top: 0.9%; 
+}
+.header{
+    border-bottom: 1px dashed grey;
+
+}
+.name{
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+.salutation{
+    border-left: 1px dashed grey;
+    border-right: 1px dashed grey;
+
+}
+.content{
+    padding: 10px;
+}
+
+@-webkit-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) }
+}
+@-moz-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) }
+}
+@-o-keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) }
+}
+@keyframes myOrbit {
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) }
+}
+.credits img{
+    height: 32px;
+    width: 32px;
+    margin-top: 10px;
+    float: right;
+    margin-right: 10px;
+    -webkit-animation: myOrbit 12s linear infinite; 
+    -moz-animation: myOrbit 12s linear infinite; 
+    -o-animation: myOrbit 12s linear infinite;
+    animation: myOrbit 12s linear infinite;  
+    cursor: pointer;
+}
+
+.content-title{
+    margin-top: 5%;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.content .btn-default{
+    background-color: transparent;
+    width: 20px;
+    color: grey;
+    float: right;
+    border: 0.11px solid #ccc;
+    padding: 2px;
+    padding-top: 3px;
+}
+
+.boxx{
+    padding: 5%;
+    border-top: 1px dashed #808080;
+}
+.boxx1, .boxx2{
+    border-right: 1px dashed #808080;
+}
+.time-left{
+    float: right;
+}
+
+.myitems{
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+    border-bottom: 0.5px dashed rgba(128, 128, 128, 0.171);
+}
+
+.maincredits img{
+    height: 64px;
+    width: 64px;
+    margin: 10px auto;
+    margin-right: 20px;
+    float: right;
+    -webkit-animation: myOrbit 12s linear infinite; 
+    -moz-animation: myOrbit 12s linear infinite; 
+    -o-animation: myOrbit 12s linear infinite;
+    animation: myOrbit 12s linear infinite;
+}
+.credit-title{
+    float: left;
+    margin: 34px 0px;
+}
+.credit-grid{
+    margin-bottom: 70px;
+}
+
+.topbar{
+    border: 1px solid grey;
+    justify-content: right;
+}
+.topbar button{
+    float: right;
+}
+.topbar span{
+    margin-top: 7px;
+}
+
+.formadjust{
+    margin-left: 50px;
+}
+.maker-info{
+    float: right;
+    text-orientation: sideways;
+}
+.datetime{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.dull{
+    color: grey;
+}

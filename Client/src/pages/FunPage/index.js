@@ -4,12 +4,13 @@ import TaskForm from "../../components/TaskForm";
 import Alert from "../../components/Alert";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nav from "../../components/Nav";
 import DayJoke from "../../components/DayJoke";
 import DayQuote from "../../components/DayQuote";
 import DayPic from "../../components/DayPic";
 import DayWeather from "../../components/DayWeather";
-import { Col, Row, Container, Card, Jumbotron } from "react-bootstrap";
+import { Col, Row, Container, Card } from "react-bootstrap";
+import { Header } from "../../components/Header";
+import "../../../src/App.css";
 
 const initialTasks = {
   January: [],
@@ -114,6 +115,7 @@ function FunPage () {
 
   return (
     <>
+    <Header />
       <main className="App">
         <Container fluid>
           <Row>
