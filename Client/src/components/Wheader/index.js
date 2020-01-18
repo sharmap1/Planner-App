@@ -69,14 +69,14 @@ export class Wheader extends React.Component {
 
   render() {
     return (
-      <div className="header">
+      <div>
         <p style={{ margin: "20px" }}>SEATTLE</p>
         {/* <Nav /> */}
         <div className="cell datetime" style={{ margin: "20px" }}>
-          <div className="date_line">
-            <p className="meme">{this.state.bahar}</p>
+          <div className="dates_line">
+            <p className="time">{this.state.bahar}</p>
             <p> &nbsp;{this.state.timeRightNow}</p>
-            <p className="meme">{this.state.day} </p>
+            <p className="time">{this.state.day} </p>
             <p>&nbsp;{this.state.d}</p>
           </div>
           {/* <div className="time_line">

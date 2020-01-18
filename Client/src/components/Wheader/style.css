@@ -1,11 +1,11 @@
-.date_line {
+.dates_line {
   color: white;
   font-size: small;
 }
-.time_line {
+.times_line {
   color: white;
   font-size: small;
 }
-.meme{
-  float:right;
+.time {
+  float: right;
 }
