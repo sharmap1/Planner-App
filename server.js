@@ -14,8 +14,7 @@ if (process.env.NODE_ENV === "production") {
 // connect to Mongo DB
 mongoose.connect(
   // TODO- set up mlab on heroku and replace credentials below
-  process.env.MONGODB_URI ||
-    "mongodb://project3:password1@ds263808.mlab.com:63808/heroku_zk6k9vvd",
+  process.env.MONGODB_URI || "mongodb://localhost/todo",
   { useNewUrlParser: true }
 );
 // to let us know database connection established

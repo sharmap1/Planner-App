@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"nodemon --ignore 'Client/*'\" \"npm run Client\"",
     "client": "cd Client && npm run start",
     "install": "cd Client && npm install",
     "build": "cd Client && npm run build",
