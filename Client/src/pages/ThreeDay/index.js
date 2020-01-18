@@ -5,9 +5,8 @@ import {
   DisplayDayAfterTomorrow
 } from "../../components/Display";
 import SimpleSotrage from "react-simple-storage";
-import App from "../../App.css";
-
-import { Header } from "../../components/Wheader";
+import { Header } from "../../components/Header"
+import "./style.css";
 
 class ThreeDay extends React.Component {
   constructor(props) {
@@ -128,6 +127,7 @@ class ThreeDay extends React.Component {
     if (this.state.showSetting === "False") {
       return (
         <div>
+          <Header />
           <SimpleSotrage parent={this} />
           <br />
           <Textbox updateEntry={this.updateEntry} />
