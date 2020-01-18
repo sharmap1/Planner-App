@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col } from "react-bootstrap";
+import { set } from "mongoose";
 
 const DayJoke = () => {
   const [joke, setJoke] = useState("");
+  const [fetching, setFetching] = useState("false");
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
@@ -14,11 +16,11 @@ const DayJoke = () => {
       setJoke(`${result.data[0].setup} ${result.data[0].punchline}`);
     };
     fetchData();
-  }, []);
+  }, [fetching]);
 
   return (
     <>
-      <Col md={{ span: 3, offset: 0 }}>
+      <Col md="12">
         <Card.Body className="joke-card">
           <Card.Img
             variant="top"
@@ -27,6 +29,12 @@ const DayJoke = () => {
           <Card.Header as="h5">My Jokes</Card.Header>
           <p>{joke}</p>
           {/* <DayJoke /> */}
+          <button
+            onClick={() => setFetching(!fetching)}
+            className="btn btn-success"
+          >
+            next
+          </button>
         </Card.Body>
       </Col>
     </>

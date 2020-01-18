@@ -5,7 +5,8 @@ import { Card, Col } from "react-bootstrap";
 const DaySports = () => {
   return (
     <>
-      <Col md={{ span: 3, offset: 0 }}>
+      {/* <Col md={{ span: 3, offset: 0 }}> */}
+      <Col md="12">
         <Card.Body className="sport-card">
           <Card.Img
             variant="top"

@@ -5,6 +5,8 @@ import { Card, Col } from "react-bootstrap";
 
 const DayQuote = () => {
   const [quote, setQuote] = useState("");
+  const [fetching, setFetching] = useState("false");
+
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios("https://api.kanye.rest?format=text");
@@ -14,11 +16,12 @@ const DayQuote = () => {
     };
 
     fetchData();
-  }, []);
+  }, [fetching]);
 
   return (
     <>
-      <Col md={{ span: 3, offset: 0 }}>
+      {/* <Col md={{ span: 3, offset: 0 }}> */}
+      <Col md="12">
         <Card.Body className="quote-card">
           <Card.Img
             variant="top"
@@ -26,10 +29,14 @@ const DayQuote = () => {
           />
           <Card.Header as="h5">My Quotes</Card.Header>
 
-          <p>
-            {quote}
-          </p>
+          <p>{quote}</p>
           {/* </Card.Header> */}
+          <button
+            onClick={() => setFetching(!fetching)}
+            className="btn btn-success"
+          >
+            next
+          </button>
         </Card.Body>
       </Col>
     </>

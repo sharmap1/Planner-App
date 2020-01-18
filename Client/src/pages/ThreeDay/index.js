@@ -2,7 +2,13 @@ import React from 'react';
 import"../../../src/App.css";
 import { DisplayToday, DisplayTomorrow, DisplayDayAfterTomorrow } from '../../components/Display';
 import SimpleSotrage from 'react-simple-storage';
+<<<<<<< HEAD
 import { Header } from "../../components/Header";
+=======
+import App from "../../App.css";
+
+import { Header } from '../../components/Header';
+>>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
 
 class ThreeDay extends React.Component{
   constructor(props){
