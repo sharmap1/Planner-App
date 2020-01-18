@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import Nav from "../Nav";
 
-export class Header extends React.Component {
+export class Wheader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -70,14 +70,14 @@ export class Header extends React.Component {
   render() {
     return (
       <div className="header">
+        <p style={{ margin: "20px" }}>SEATTLE</p>
         {/* <Nav /> */}
-        <div className="cell datetime">
+        <div className="cell datetime" style={{ margin: "20px" }}>
           <div className="date_line">
-            <p>SEATTLE</p>
-            <p className="meme">{this.state.day} </p>
-            <p>&nbsp;{this.state.d}</p>
             <p className="meme">{this.state.bahar}</p>
             <p> &nbsp;{this.state.timeRightNow}</p>
+            <p className="meme">{this.state.day} </p>
+            <p>&nbsp;{this.state.d}</p>
           </div>
           {/* <div className="time_line">
                        </span>
@@ -93,4 +93,4 @@ export class Header extends React.Component {
   }
 }
 
-export default Header;
+export default Wheader;

@@ -1,25 +1,25 @@
-const router = require('express').Router();
-let Task = require('../Models/todo');
-// TODO: 
+const router = require("express").Router();
+let Task = require("../Models/todo/todo.model");
+// TODO:
 
 // my TODO routes
-    // task add
-router.post('/add', (req, res) =>{
-    // res.render('index')
-    // TODO-----------
+// task add
+router.post("/add", (req, res) => {
+  // res.render('index')
+  // TODO-----------
 });
-    // task edit
-router.put('/edit', (req, res) =>{
-    // res.render('index')
-    // TODO-----------
+// task edit
+router.put("/edit", (req, res) => {
+  // res.render('index')
+  // TODO-----------
 });
-    // task delete
-router.delete('/delete', (req, res) =>{
-    // res.render('index')
-    // TODO-----------
+// task delete
+router.delete("/delete", (req, res) => {
+  // res.render('index')
+  // TODO-----------
 });
-    // task strikethrough
-    // TODO-------------
+// task strikethrough
+// TODO-------------
 // my Jokes routes
 // router.get('/jokes', (req, res) =>{
 //     res.render('index')

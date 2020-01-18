@@ -23,15 +23,16 @@ const DayJoke = () => {
       <Col md="12">
         <Card.Body className="joke-card">
           <Card.Img
+            className="card-img"
             variant="top"
             src="https://i.ytimg.com/vi/y-VILY1x6RM/hqdefault.jpg"
           />
           <Card.Header as="h5">My Jokes</Card.Header>
-          <p>{joke}</p>
+          <p style={{ margin: "20px" }}>{joke}</p>
           {/* <DayJoke /> */}
           <button
             onClick={() => setFetching(!fetching)}
-            className="btn btn-success"
+            className="btn btn-info"
           >
             next
           </button>

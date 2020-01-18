@@ -87,7 +87,9 @@ h3 {
   font-size: smaller;
 }
 .quote-card {
-  background-color: darkkhaki;
+  background-color: cadetblue;
+
+  /* background-color: darkkhaki; */
   color: white;
   border-radius: 2rem;
   margin-top: 2rem;
@@ -96,7 +98,8 @@ h3 {
 }
 .pic-card {
   font-size: smaller;
-  background-color: dimgray;
+  background-color: cadetblue;
+  /* background-color: dimgray; */
   color: white;
   border-radius: 2rem;
   margin-top: 2rem;
@@ -120,13 +123,18 @@ h3 {
 }
 .weather-card {
   font-size: small;
-  background-color: darkred;
+  background-color: cadetblue;
+
+  /* background-color: darkred; */
   color: white;
   border-radius: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
+.card-img {
+  height: 200px;
+  padding: 10px;
+}
 /* .quote {
   font-style: italic;
   text-align: center;

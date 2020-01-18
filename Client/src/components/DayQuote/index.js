@@ -24,16 +24,17 @@ const DayQuote = () => {
       <Col md="12">
         <Card.Body className="quote-card">
           <Card.Img
+            className="card-img"
             variant="top"
             src="http://beautyharmonylife.com/wp-content/uploads/2013/09/431217-1024x768-pine-island-800x600.jpg"
           />
           <Card.Header as="h5">My Quotes</Card.Header>
 
-          <p>{quote}</p>
+          <p style={{ margin: "20px" }}>{quote}</p>
           {/* </Card.Header> */}
           <button
             onClick={() => setFetching(!fetching)}
-            className="btn btn-success"
+            className="btn btn-info"
           >
             next
           </button>

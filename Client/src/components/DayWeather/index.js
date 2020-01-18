@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col } from "react-bootstrap";
-import { WiFahrenheit, WiDayRain } from "react-icons/wi";
-import Header from "../Header";
+import { WiFahrenheit, WiDayRain, WiDaySunny } from "react-icons/wi";
+import Wheader from "../Wheader";
 
 const DayWeather = () => {
   const [weather, setWeather] = useState("");
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        "https://api.openweathermap.org/data/2.5/weather?q=Seattle,Washington&units=imperial&appid=166a433c57516f51dfab1f7edaed8413"
+        "https://api.openweathermap.org/data/2.5/weather?q=Seattle,Washington&units=" +
+          process.env.WEATHER_KEY
       );
       console.log("result", result.data);
       setWeather(`${result.data.weather["0"].main}, ${result.data.main.temp}`);
@@ -25,14 +26,16 @@ const DayWeather = () => {
       <Col md="12">
         <Card.Body className="weather-card">
           <Card.Img
+            className="card-img"
             variant="top"
-            src="https://cdn3.iconfinder.com/data/icons/bebreezee-weather-symbols/690/icon-weather-sunrainheavy-512.png"
+            src="https://cdn.dribbble.com/users/1761137/screenshots/3665783/dribbble.gif"
           />
+          {/* <WiDaySunny className="card-img"/> */}
           <Card.Header as="h5">My Weather</Card.Header>
 
           <p>
-            <Header />
-            <p>
+            <Wheader />
+            <p style={{ margin: "20px", fontSize: "15px", fontWeight: "bold" }}>
               {weather}
               <WiFahrenheit className="weather-btn" />
             </p>
@@ -46,4 +49,4 @@ const DayWeather = () => {
 };
 export default DayWeather;
 
-// "https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&units=imperial&appid="
+//https://media.giphy.com/media/I41PoTyPnHuMM/giphy.gif
