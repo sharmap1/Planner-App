@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body{
   background-color: black;
   color: #fff;
@@ -42,23 +41,6 @@ body{
   40%   { -webkit-transform: rotate(20deg) }
   80% { -webkit-transform: rotate(-10deg); }
   100% { -webkit-transform: rotate(0deg); }
-=======
-.App {
-  background-color: azure;
-}
-
-.item {
-  background-color: khaki;
-  line-height: 1.5rem;
-  padding: 10px 10px;
-  margin-bottom: 1rem;
-  border: 1px solid lightgray;
-  display: flex;
-  justify-content: space-between;
-  transition: all 0.3s linear;
-  color: black;
-  border-radius: 1rem;
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
 }
 @-o-keyframes myOrbit {
   0% { -webkit-transform: rotate(0deg); }
@@ -187,17 +169,8 @@ form{
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-<<<<<<< HEAD
 .display_grid .cell{
   min-width: 350px;
-=======
-h1 {
-  text-align: center;
-  text-transform: capitalize;
-  margin: 2rem 0;
-  color: pink;
-  font-family: "Roboto", sans-serif;
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
 }
 .listitems{
   padding: 1px;
@@ -232,15 +205,6 @@ h1 {
   border: 0.5px solid black;
   transition: 0.3s ease-in-out;
 
-<<<<<<< HEAD
-=======
-.sub-card {
-  background-color: papayawhip;
-  color: teal;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
 }
 .minuslinee{
 position: relative;
@@ -262,7 +226,6 @@ transition: 0.3s ease-in-out;
 }
 /* display ends */
 
-<<<<<<< HEAD
 .settings_topbar{
   display: flex;
   flex-direction: row;
@@ -348,59 +311,3 @@ transition: 0.3s ease-in-out;
       width: 50vw;
   }
 }
-=======
-.joke-card {
-  background-color: cadetblue;
-  color: white;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: smaller;
-}
-.quote-card {
-  background-color: darkkhaki;
-  color: white;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: smaller;
-}
-.pic-card {
-  font-size: smaller;
-  background-color: dimgray;
-  color: white;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.date-picker {
-  font-size: smaller;
-  background-color: chocolate;
-  color: white;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.sport-card {
-  font-size: smaller;
-  background-color: limegreen;
-  color: white;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.weather-card {
-  font-size: small;
-  background-color: darkred;
-  color: white;
-  border-radius: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* .quote {
-  font-style: italic;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-} */
->>>>>>> dac85c16a4624788e1dca830f11fff2d95d17f66
