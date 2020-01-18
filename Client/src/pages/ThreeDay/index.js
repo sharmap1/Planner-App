@@ -2,6 +2,7 @@ import React from 'react';
 import { DisplayToday, DisplayTomorrow, DisplayDayAfterTomorrow } from '../../components/Display';
 import SimpleSotrage from 'react-simple-storage';
 import { Header } from '../../components/Header';
+import { Credits } from '../../components/Credits'
 
 class ThreeDay extends React.Component{
   constructor(props){
@@ -12,34 +13,27 @@ class ThreeDay extends React.Component{
       'Day_After_Tomorrow' : [],
       'aray' : [],
       'err': '',
-      'showSetting': 'False',
-      'username': 'Hi Someone!'
+      'showCredit': 'False',
+
     }
     this.updateEntry = this.updateEntry.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
-    this.showSettingFunction = this.showSettingFunction.bind(this);
-    this.setUserName = this.setUserName.bind(this);
-    this.hideSettingFunction = this.hideSettingFunction.bind(this);
+    this.showCreditFunction = this.showCreditFunction.bind(this);
+    this.hideCreditFunction = this.hideCreditFunction.bind(this);
 }
 
-  setUserName(nam){
-    this.setState({
-      'username': nam
-    })
-  }
-
-  showSettingFunction(parameter){
+  showCreditFunction(parameter){
     if (parameter === 'True'){
       this.setState({
-        'showSetting': 'True'
+        'showCredit': 'True'
       })
     }
   }
 
-  hideSettingFunction(parameter){
+  hideCreditFunction(parameter){
     if (parameter === 'False'){
       this.setState({
-        'showSetting': 'False'
+        'showCredit': 'False'
       })
     }
   }
@@ -122,10 +116,11 @@ class ThreeDay extends React.Component{
 
 
   render(){
-    if(this.state.showSetting === 'False'){
+    if(this.state.showCredit === 'False'){
       return(
               <div>
         <SimpleSotrage parent={this} />
+        <Header showCreditFunction={this.showCreditFunction} />
         <br/>
         <Textbox updateEntry={this.updateEntry} />
         <span>{this.state.err}</span>
@@ -138,14 +133,18 @@ class ThreeDay extends React.Component{
         </div>
       </div>
       );
-    }else if(this.state.showSetting === 'True'){
+    }else if(this.state.showCredit === 'True'){
       return(
       <div>
         <SimpleSotrage parent={this} />
+        <Header showCreditFunction={this.showCreditFunction} />
         <br/>
         <span>{this.state.err}</span>
         <br/>
         <br/>
+          <div>
+          <Credits hideCreditFunction={this.hideCreditFunction} />
+          </div>
       </div>
         
       )
