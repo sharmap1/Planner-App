@@ -17,13 +17,18 @@ mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/todo",
   { useNewUrlParser: true }
 );
+
 // to let us know database connection established
 // connection.once("open", () => {
 //   console.log("----MongoDB database connection established successfully!----");
 // });
 // connect and use router
 const routes = require("./Routes/routes");
-app.use("/", routes);
+// app.use("/", routes);
+app.use("/api", routes);
+app.get("/").function(req,res){
+  res.render('root')
+}
 //PORT listening on
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
