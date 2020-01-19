@@ -12,7 +12,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("Client/build"));
   app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./Client/build/index.html"));
+    res.sendFile(path.join(__dirname, "Client", "build", "index.html"));
   });
 }
 // connect to Mongo DB
@@ -31,7 +31,7 @@ const routes = require("./Routes/routes");
 app.use("/", routes);
 // app.use("/api", routes);
 
-//PORT listening on
+//PORT list ening on
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
