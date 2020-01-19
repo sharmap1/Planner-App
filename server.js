@@ -3,6 +3,7 @@ const PORT = process.env.PORT || 4000;
 const cors = require("cors");
 const app = express();
 const mongoose = require("mongoose");
+const path = require("path");
 // Define middleware here
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
@@ -26,9 +27,9 @@ mongoose.connect(
 const routes = require("./Routes/routes");
 app.use("/", routes);
 // app.use("/api", routes);
-// app.get("/", function(req, res) {
-//   res.render("root");
-// });
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./Client/build/index.html"));
+});
 //PORT listening on
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
