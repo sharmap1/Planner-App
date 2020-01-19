@@ -24,11 +24,11 @@ mongoose.connect(
 // });
 // connect and use router
 const routes = require("./Routes/routes");
-// app.use("/", routes);
-app.use("/api", routes);
-app.get("/").function(req,res){
-  res.render('root')
-}
+app.use("/", routes);
+// app.use("/api", routes);
+// app.get("/", function(req, res) {
+//   res.render("root");
+// });
 //PORT listening on
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
