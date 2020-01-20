@@ -22,10 +22,6 @@ mongoose.connect(
   { useNewUrlParser: true }
 );
 
-// to let us know database connection established
-// connection.once("open", () => {
-//   console.log("----MongoDB database connection established successfully!----");
-// });
 // connect and use router
 const routes = require("./Routes/routes");
 app.use("/", routes);
