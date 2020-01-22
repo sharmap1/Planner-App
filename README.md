@@ -33,11 +33,10 @@ NOTE: Facebook's command to install a react app is `npx create-react-app` NOT `n
 ## Motivation:
 
 1. Organize a day more meaningfully
-2. Organize priorities by today/ tomorrow/
-3. day-after tomorrow
-4. Organise with time frame
-5. Be inspired &
-6. Prioritize fun!
+2. Organize priorities by today/ tomorrow/ day-after tomorrow
+3. Organise with time frame
+4. Be inspired &
+5. Prioritize fun!
 
 ## Technologies used
 
@@ -60,8 +59,8 @@ NOTE: Facebook's command to install a react app is `npx create-react-app` NOT `n
 
 ## Screenshots
 
-<img src="./assets/img/Capture-2.JPG" width="750" height="450" >
-<img src="./assets/img/Capture-1.JPG" width="750" height="450" >
+<img src="./assets/img/Capture-2.JPG" width="850" height="450" >
+<img src="./assets/img/Capture-1.JPG" width="850" height="450" >
 
 ## Contributing
 
