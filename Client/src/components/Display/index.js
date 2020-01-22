@@ -27,32 +27,36 @@ componentDidMount(){
   }, 1000)
 }
 
-    removeThis(e){
-      this.props.deleteItem(e, 'Today');
-    }
-    render(){
-      return(
-          <div className="cell">
-          <div className="boxx boxx1">
-          <div className="alert">Today<span className="time-left"> {this.state.todayTimingLeftHrs} hr {this.state.todayTimingLeftMins} Min left</span></div>
+removeThis(e){
+  this.props.deleteItem(e, 'Today');
+}
+render(){
+  return(
+    <div className="cell">
+      <div className="boxx boxx1">
+        <div className="alert">Today
+          <span className="time-left"> {this.state.todayTimingLeftHrs} hr           {this.state.todayTimingLeftMins} Min left</span>
+        </div>
 
-           {this.props.items.map((item, index) => {
-              return(
-                <div key={index} className="listitems">
-                  <div className="cell">
-                    <div className="cell content-title">
-                    <div className="minus" onClick={() => this.removeThis(index)}><div className="minusline onearm"></div><div className="minuslinee secondarm"></div></div>&nbsp;{item} &nbsp;                    
-                    </div>
-                  </div>
+        {this.props.items.map((item, index) => {
+          return(
+            <div key={index} className="listitems">
+              <div className="cell">
+                <div className="cell content-title">
+                  <div className="minus" onClick={() => this.removeThis(index)}>
+                    <div className="minusline onearm"></div>
+                    <div className="minuslinee secondarm"></div>
+                  </div>&nbsp;{item} &nbsp;                    
                 </div>
-
+              </div>
+            </div>
           );
-            })
-            }
-          </div>
-          </div>
-      )
-    }
+        })
+          }
+      </div>
+    </div>
+  )
+}
   }
   
 export class DisplayTomorrow extends React.Component{

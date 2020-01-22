@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./components/Nav";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FunPage from "./pages/FunPage";
 import ThreeDay from "./pages/ThreeDay";
 import NoMatch from "./pages/NoMatch";

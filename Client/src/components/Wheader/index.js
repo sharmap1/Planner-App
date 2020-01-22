@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Nav from "../Nav";
 
 export class Wheader extends React.Component {
   constructor(props) {
@@ -79,9 +78,6 @@ export class Wheader extends React.Component {
             <p className="time">{this.state.day} </p>
             <p>&nbsp;{this.state.d}</p>
           </div>
-          {/* <div className="time_line">
-                       </span>
-                    </div> */}
         </div>
         <div className="salutation cell">
           <div className="name">
