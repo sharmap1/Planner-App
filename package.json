@@ -13,8 +13,7 @@
     "start:dev": "concurrently \"nodemon --ignore 'Client/*'\" \"npm run Client\"",
     "client": "cd Client && npm run start",
     "install": "cd Client && npm install",
-    "build": "cd Client && npm install && npm run build",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "cd Client && npm install && npm run build",
     "deploy": "npm run clean && npm run build && serve -s build",
     "rerun": "npm run clean && npm run build && serve -s build"
   },

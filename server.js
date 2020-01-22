@@ -1,31 +1,34 @@
-const express = require("express");
-const PORT = process.env.PORT || 4000;
-const cors = require("cors");
-const app = express();
+// Importing Modules
 const mongoose = require("mongoose");
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 const path = require("path");
-// Define middleware here
+//Define Global Variables
+const app = express();
+const PORT = process.env.PORT || 4000;
+//Importing Files
+const routes = require("./Routes");
+
+// connect to Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/todo", {
+  useNewUrlParser: true
+});
+// Configuration
 app.use(cors());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/", routes);
+// Define middleware here
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("Client/build"));
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "Client", "build", "index.html"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "Client", "build", "index.html")); //relative path
   });
 }
-// connect to Mongo DB
-mongoose.connect(
-  // TODO- set up mlab on heroku and replace credentials below
-  process.env.MONGODB_URI || "mongodb://localhost/todo",
-  { useNewUrlParser: true }
-);
-
-// connect and use router
-const routes = require("./Routes/routes");
-app.use("/", routes);
-// app.use("/api", routes);
 
 //PORT list ening on
 app.listen(PORT, () => {
