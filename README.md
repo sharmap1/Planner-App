@@ -43,15 +43,13 @@ NOTE: Facebook's command to install a react app is `npx create-react-app` NOT `n
 
 | Client dependencies          | Planner App dependencies |
 | ---------------------------- | ------------------------ |
-| @testing-library/jest-dom    | concurrently             |
-| @testing-library/react       | cors                     |
-| @testing-library/user-event  | express                  |
-| Axios                        | if-enve                  |
-| Materialize-css              | Node                     |
 | React                        | Express                  |
-| React-bootstrap, react-icons |                          |
-| React-dom                    |                          |
-| React-scripts                |                          |
+| React router dom             | Node                     |
+| React-scripts                | Mongoose                 |
+| React-bootstrap, react-icons | cors                     |
+| React Simple Storage         | concurrently             |  |
+| Axios                        | if-enve                  |
+| Materialize-css              |                          |
 
 # API used
 
@@ -62,8 +60,8 @@ NOTE: Facebook's command to install a react app is `npx create-react-app` NOT `n
 
 ## Screenshots
 
-<img src="./assets/img/Capture-1.JPG" width="650" height="450" > 
-<img src="./assets/img/Capture-2.JPG" width="650" height="450" >
+<img src="./assets/img/Capture-2.JPG" width="750" height="450" >
+<img src="./assets/img/Capture-1.JPG" width="750" height="450" >
 
 ## Contributing
 
