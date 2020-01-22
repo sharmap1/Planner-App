@@ -65,9 +65,9 @@ export class Header extends React.Component {
       day = "0" + day;
     }
     if (month < 10) {
-      month = "0" + month;
+      month = month + 1;
     }
-    var d = day + "-" + month + "-" + year;
+    var d = month + "-" + day + "-" + year;
     this.setState({
       d: d,
       day: " " + days[din]
